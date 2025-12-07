@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project implements a simple authentication service using JWT (JSON Web Tokens). It provides endpoints for user registration, login, and token validation.
+This project is a bootstrap/scaffolding setup for a Django authentication service using JWT (JSON Web Tokens). Endpoints for user registration, login, and token validation are planned but not yet implemented.
 
 ## Installation
 
