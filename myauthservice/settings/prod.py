@@ -28,8 +28,6 @@ DATABASES = {
     }
 }
 
-if 'SECRET_KEY' not in os.environ:
-    raise Exception("SECRET_KEY environment variable not set")
 SECRET_KEY = os.environ['SECRET_KEY']
 
 LOGGING = {
