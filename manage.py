@@ -11,7 +11,7 @@ def main():
     BASE_DIR = Path(__file__).resolve().parent
     load_dotenv(BASE_DIR / ".env", override=False)
 
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myauthservice.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myauthservice.settings.dev')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
