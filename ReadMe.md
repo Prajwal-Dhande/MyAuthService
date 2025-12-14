@@ -30,7 +30,7 @@ make dev
 - Create venv at `.venv/`
 - Install dependencies from `requirements.txt`
 - Run `python manage.py migrate`
-- Start Django dev server at `http://127.0.0.1:8000`
+- Start Django dev server at `http://localhost:8000`
 
 ## Environment Variables
 
