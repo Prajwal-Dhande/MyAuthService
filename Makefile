@@ -24,7 +24,7 @@ $(VENV):
 install: $(VENV)
 	$(PIP) install -r requirements.txt
 
-migrate:
+migrate: $(VENV) install
 	DJANGO_SETTINGS_MODULE=$(DJANGO_SETTINGS_MODULE) $(PYTHON) manage.py migrate
 
 run: $(VENV) install migrate
