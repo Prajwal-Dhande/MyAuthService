@@ -33,7 +33,7 @@ SECRET_KEY=your-long-random-secret
 
 > **Notes:**
 > - `.env` is for local development only.
-> - n production, do not rely on `.env`; inject environment variables via your deployment platform.
+> - In production, do not rely on `.env`; inject environment variables via your deployment platform.
 
 ## Settings (dev / prod / test)
 
