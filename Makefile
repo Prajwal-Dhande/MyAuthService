@@ -16,7 +16,10 @@ help:
 
 dev: setup run
 
-setup: $(VENV) install migrate
+setup:
+	$(MAKE) $(VENV)
+	$(MAKE) install
+	$(MAKE) migrate
 
 $(VENV):
 	$(PY) -m venv $(VENV)
