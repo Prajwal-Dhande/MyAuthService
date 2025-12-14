@@ -8,12 +8,29 @@ This project is a bootstrap/scaffolding setup for a Django authentication servic
 
 - Python 3.x
 - pip
+- pkg-config
+- libmysqlclient-dev
 
 ## Installation
 
 ```bash
 pip install -r requirements.txt
 ```
+
+## Local Development
+
+### Start (one command)
+
+```bash
+make dev
+```
+
+### What it does
+
+- Create venv at `.venv/`
+- Install dependencies from `requirements.txt`
+- Run `python manage.py migrate`
+- Start Django dev server at `http://127.0.0.1:8000`
 
 ## Environment Variables
 
@@ -51,8 +68,13 @@ You can specify which settings module to use in two ways:
 1. **By setting the `DJANGO_SETTINGS_MODULE` environment variable (this overrides the default in `manage.py`):**
 
    ```bash
+   # Run server with dev settings
    DJANGO_SETTINGS_MODULE=myauthservice.settings.dev python manage.py runserver
+
+   # Run tests with test settings
    DJANGO_SETTINGS_MODULE=myauthservice.settings.test python manage.py test
+    ```
+
 ## Logging
 
 * Development logging writes to console (stdout).
