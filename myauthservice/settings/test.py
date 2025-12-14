@@ -10,7 +10,7 @@ from .base import *
 # This helps diagnose test failures, but should not be used in production.
 DEBUG = True
 
-# Allow all hosts in development
+# Allow all hosts during testing to prevent host header validation errors in test environments and CI pipelines
 ALLOWED_HOSTS = ['*']
 
 # Database
