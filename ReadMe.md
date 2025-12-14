@@ -73,7 +73,6 @@ You can specify which settings module to use in two ways:
 
    # Run tests with test settings
    DJANGO_SETTINGS_MODULE=myauthservice.settings.test python manage.py test
-    ```
 
 ## Logging
 
