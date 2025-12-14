@@ -55,9 +55,9 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['file'],
+            'handlers': ['console'],
             'level': os.environ.get('DJANGO_LOG_LEVEL', 'INFO'),
-            'propagate': True,
+            'propagate': False,
         },
     },
 }
