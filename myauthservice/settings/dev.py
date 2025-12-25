@@ -50,6 +50,7 @@ LOGGING["loggers"]["oauth2"] = {
 }
 
 __all__ = [
+    "ALLOWED_HOSTS",
     "AUTH_PASSWORD_VALIDATORS",
     "BASE_DIR",
     "DATABASES",
