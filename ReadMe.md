@@ -89,11 +89,16 @@ You can specify which settings module to use in two ways:
 - To run tests:
   ```bash
   pytest tests/
+  ```
 
 ## Linting and Formatting
 - To run lint checks:
   ```bash
-  flake8 myauthservice/ oauth2/
+  flake8 .
+  ```
+- To auto-format code:
+  ```bash
+  black .
   ```
 
 ## Logging
