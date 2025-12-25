@@ -98,11 +98,7 @@ You can specify which settings module to use in two ways:
 ## Linting and Formatting
 - To run lint checks:
   ```bash
-  flake8 src/
-  ```
-- To auto-format code:
-  ```bash
-  black src/
+  flake8 myauthservice/ oauth2/
   ```
 
 ## Logging
