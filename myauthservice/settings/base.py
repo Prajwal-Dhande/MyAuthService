@@ -18,6 +18,16 @@ from django.core.exceptions import ImproperlyConfigured
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+# Read version from VERSION file
+VERSION_FILE = BASE_DIR / "VERSION"
+DEFAULT_SERVICE_VERSION = "0.0.0"
+if VERSION_FILE.exists():
+    try:
+        SERVICE_VERSION = VERSION_FILE.read_text().strip()
+    except (OSError, UnicodeDecodeError):
+        SERVICE_VERSION = DEFAULT_SERVICE_VERSION
+else:
+    SERVICE_VERSION = DEFAULT_SERVICE_VERSION  # fallback if VERSION file is missing
 
 if "SECRET_KEY" not in os.environ:
     raise ImproperlyConfigured("SECRET_KEY environment variable not set")
