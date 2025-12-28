@@ -189,4 +189,4 @@ The API is accessible under the `/api/` prefix.
 
 ### API Documentation
 
-Explore the API docs in Swagger UI at **`/api/swagger`**. The raw OpenAPI schema is available at **`/api/schema`**, and it automatically includes existing endpoints like `/api/health` and `/api/version`.
+Explore the API docs in Swagger UI at **`/swagger`**. The raw OpenAPI schema is available at **`/schema`**, and it automatically includes existing endpoints like `/api/health` and `/api/version`.
