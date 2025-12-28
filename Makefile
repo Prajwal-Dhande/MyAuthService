@@ -12,7 +12,7 @@ help:
 	@echo "  make down-v   - docker: down -v (reset volumes)"
 	@echo "  make build    - docker: build"
 	@echo "  make logs     - docker: logs -f"
-	@echo "  make shell    - docker: exec bash in web"
+	@echo "  make shell    - docker: exec bash in $(SERVICE)"
 	@echo "  make migrate  - docker: run migrations"
 	@echo "  make test     - docker: run pytest with test settings"
 
@@ -29,13 +29,13 @@ down-v:
 	$(COMPOSE) down -v
 
 logs: up
-	$(COMPOSE) logs -f
+	$(COMPOSE) logs -f $(SERVICE)
 
 shell: up
 	$(COMPOSE) exec $(SERVICE) bash
 
-migrate: up
+migrate:
 	$(COMPOSE) exec $(SERVICE) python manage.py migrate
 
-test: up
-	$(COMPOSE) exec -e DJANGO_SETTINGS_MODULE=myauthservice.settings.test $(SERVICE) pytest
+test:
+	$(COMPOSE) run --rm -e DJANGO_SETTINGS_MODULE=myauthservice.settings.test $(SERVICE) pytest
